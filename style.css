@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #1b1d24;
+  color: #5d9d0b;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Main Page */
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+.logo {
+  color: #5d9d0b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5d9d0b;
+  padding: 0 1.5rem;
+}
+
+nav a:hover {
+  color: #f7f7f7;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #5d9d0b;
+  padding: 0rem 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3 rem;
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 1.5 rem;
+  line-height: 1.5;
+}
+
+.column-right {
+  width: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto;
+  padding: 10px;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+.sensor-box {
+  background-color: #1b1d24;
+  border-radius: 40px;
+  padding: 50px;
+  text-align: center;
+  color: #5d9d0b;
+  box-shadow: 0 0 40px rgba(243, 240, 240, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* History Page */
+
+.heroH-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.top-section {
+  padding: 20px;
+  /* height: 500px; */
+  max-height: 750px; /* Set the maximum height of the container */
+  overflow: auto; /* Enable scroll if the content overflows */
+}
+
+.chart-container {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.chart-container #lineGraph .chartjs-tooltip {
+    font-size: 12px;
+    /* Adjust the tooltip font size as needed */
+}
+
+.chart-container #lineGraph .chartjs-tooltip-key {
+    font-size: 12px;
+    /* Adjust the tooltip key font size as needed */
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bottom-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px; /* Set the maximum height of the container */
+  overflow: auto; /* Enable scroll if the content overflows */
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+  /* Center-align the values */
+  border: 1px solid #5d9d0b;
+}
+
+.table th {
+  background-color: #222;
+}
